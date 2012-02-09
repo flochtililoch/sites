@@ -17,25 +17,30 @@ Requirements
 * Apache2 mod_macro 
 
 
-Setup (assumes that your installing in /var/www)
+Setup (assumes that you are installing in /var/www)
 ---------------------
 
 * Install mod_macro
+
     apt-get install libapache2-mod-macro
     a2enmod macro
     
 * Clone this repo in /var/www
+
     git clone git://github.com/flochtililoch/sites.git /var/www
 
 * Init and update submodules
+
     git submodule init
     git submodule update
     
 * Link the main VHost file to Apache available sites, and enable it
+
     ln -s /var/www/sites/conf/all.conf /etc/apache2/sites-available/
     a2ensite all
 
 * Restart Apache
+
     apachectl restart
 
 
