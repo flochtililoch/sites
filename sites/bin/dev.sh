@@ -90,9 +90,9 @@ function cleanup () {
   if [ -n "$2" ]
   	then db_file=$2
   	else 
-  		db_file=$(ls -t1 ${var_root_dir}sql/${db_name}-* | head -n1)
+  		db_file=$(ls -t1 ${mysql_output_dir}/${db_name}-* | head -n1)
   fi
-  cdp ${project} && git clean -f -d && git pull && git reset --hard HEAD
+  cdp ${project} && git reset --hard HEAD && git clean -f -d && git pull
   db-drop ${db_name}
   db-create ${db_name}
   db-import ${db_file}
