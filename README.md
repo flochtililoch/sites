@@ -22,26 +22,26 @@ Setup (assumes that you are installing in /var/www)
 
 * Install mod_macro
 
-    apt-get install libapache2-mod-macro
-    a2enmod macro
+    ```apt-get install libapache2-mod-macro
+    a2enmod macro```
     
 * Clone this repo in /var/www
 
-    git clone git://github.com/flochtililoch/sites.git /var/www
+    ```git clone git://github.com/flochtililoch/sites.git /var/www```
 
 * Init and update submodules
 
-    git submodule init
-    git submodule update
+    ```git submodule init
+    git submodule update```
     
 * Link the main VHost file to Apache available sites, and enable it
 
-    ln -s /var/www/sites/conf/all.conf /etc/apache2/sites-available/
-    a2ensite all
+    ```ln -s /var/www/sites/conf/all.conf /etc/apache2/sites-available/
+    a2ensite all```
 
 * Restart Apache
 
-    apachectl restart
+    ```apachectl restart```
 
 
 Configuration
